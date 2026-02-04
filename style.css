@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  transition: background 1s ease;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  background: #ff4b5c;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #e63946;
+}
+
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-120vh); opacity: 0; }
+}
